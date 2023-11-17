@@ -1,0 +1,17 @@
+app** makeAppArray(FILE* fp, int numApps){
+
+    if(numApps==0){
+        return NULL;
+    }
+
+// Allocate memory first
+// can use calloc or malloc- allocate bulk memory
+    app** a = calloc(numApps, sizeof(app));
+    // for malloc it would look like
+    // app** a = malloc(numApps * sizeof(app));
+
+    for (int i = 0; i< numApps; i++){
+        fscanf(ifp, "%s %d", app[i]->name, app[i]->price);
+    }
+    return app;
+}
